@@ -1,0 +1,35 @@
+{
+  "name": "@org/db-models",
+  "version": "1.0.0",
+  "description": "Shared Prisma schema and entities",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+
+  "files": [
+    "dist",
+    "prisma/schema.prisma"
+  ],
+
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+
+  "peerDependencies": {
+    "@prisma/client": "^5.0.0"
+  },
+
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "prisma": "^5.0.0",
+    "@prisma/client": "^5.0.0"
+  },
+
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./schema": "./prisma/schema.prisma"
+  }
+}
