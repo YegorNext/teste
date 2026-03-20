@@ -2,12 +2,24 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "CommonJS",
+    "moduleResolution": "Node",
+
+    "rootDir": "src",
+    "outDir": "dist",
+
     "strict": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
 
     "declaration": true,
-    "outDir": "dist",
-    "rootDir": "src"
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
+
+    "sourceMap": true,
+
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
